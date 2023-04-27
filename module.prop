@@ -1,0 +1,7 @@
+id=modified-play-store
+name=Modified Play Store
+version=0.1.0
+versionCode=10
+author=gloeyisk
+description=Systemless installs modified Play Store to allow (in-)app-purchases with microG
+updateJson=
