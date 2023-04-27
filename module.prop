@@ -1,0 +1,7 @@
+id=collective-privileged-extensions
+name=Collective Privileged Extensions
+version=0.1.0
+versionCode=10
+author=gloeyisk
+description=Systemless installs collective privileged extensions (Aurora Services & F-Droid Privileged Extensions)
+updateJson=
