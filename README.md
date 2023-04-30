@@ -19,6 +19,7 @@ F-Droid Privileged Extensions: 0.2.13
 ## Credits:
 - [@topjohnwu](https://github.com/topjohnwu) / Magisk - Magisk Module Template
 - [@JumbomanXDA](https://github.com/JumbomanXDA) / Custom installation script
+- [@MrCarb0n](https://github.com/MrCarb0n) / Code quality and syntax
 - [Aurora OSS](https://gitlab.com/AuroraOSS/AuroraServices)
 - [F-Droid](https://gitlab.com/fdroid/privileged-extension)
 
