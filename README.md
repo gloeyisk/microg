@@ -18,6 +18,7 @@ Play Store: 20.9.20-all
 ## Credits:
 - [@topjohnwu](https://github.com/topjohnwu) / Magisk - Magisk Module Template
 - [@JumbomanXDA](https://github.com/JumbomanXDA) / Custom installation script
+- [@MrCarb0n](https://github.com/MrCarb0n) / Code quality and syntax
 - [@FriendlyNeighborhoodShane](https://github.com/FriendlyNeighborhoodShane) / MinMicroG - Primary sources
 
 ## Extras:

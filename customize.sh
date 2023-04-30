@@ -8,16 +8,30 @@
 
 # Checking for installation environment
 if [ $BOOTMODE = true ]; then
- ROOT=$(find `magisk --path` -type d -name "mirror" | head -n 1)
-	ui_print "- Root path: $ROOT"
+ROOT=$(find `magisk --path` -type d -name "mirror" | head -n 1)
+  ui_print "- Root path: $ROOT"
 else
- ROOT=""
+ROOT=""
 fi
 
-# Install APK as system apps (replaces FakeStore APK)
-REPLACE="
-/system/product/priv-app/FakeStore
-"
+# Search APK location (FakeStore)
+  ui_print "- Search default APK location"
+  ui_print "  - Searching: FakeStore"
+for DIR in "/system/priv-app/FakeStore" \
+           "/system/product/priv-app/FakeStore"; do
+if [ -d "$DIR" ]; then
+FS="$DIR"
+  ui_print "    APK found in: $DIR"
+break
+fi
+done
+if [ -z "$FS" ]; then
+  ui_print "  Prebuilt FakeStore is not available"
+  ui_print "  This module is mainly for microG! Aborting! "
+exit 1
+fi
+
+# Install APK as system apps
 APK=/system/priv-app
   ui_print "- Installing APK files"
 mkdir -p $MODPATH$APK/Phonesky
