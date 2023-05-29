@@ -1,0 +1,7 @@
+id=build-fingerprint-changer
+name=Build Fingerprint Changer - Generic
+version=TQ2B.230505.005.A1
+versionCode=1
+author=gloeyisk
+description=Override current ROM build fingerprint in order to bypass SafetyNet CTS check on both GMS and microG
+updateJson=https://raw.githubusercontent.com/gloeyisk/microg/build_fp/module.json

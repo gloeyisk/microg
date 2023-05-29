@@ -1,0 +1,21 @@
+#
+# Build Fingerprint Changer by the
+# open-source loving GL-DP and all contributors;
+# Override current ROM build fingerprint in order to bypass SafetyNet Basic & CTS check on microG
+#
+
+# Use newest release of Google's device fingerprint
+ro.build.type=user
+ro.build.tags=release-keys
+ro.boot.vbmeta.device_state=locked
+ro.boot.verifiedbootstate=green
+ro.vendor.build.tags=release-keys
+vendor.boot.verifiedbootstate=green
+ro.bootimage.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.odm.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.product.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.system.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.system_ext.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.vendor.build.fingerprint=google/lynx/lynx:13/TQ2B.230505.005.A1/9808202:user/release-keys
+ro.build.description=lynx-user 13 TQ2B.230505.005.A1 9808202 release-keys
