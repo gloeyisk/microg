@@ -2,57 +2,52 @@
 
 #
 # Modified Play Store by the
-# open source loving GL-DP and all contributors;
+# open-source loving GL-DP and all contributors;
 # Systemless installs modified Play Store to allow (in-)app-purchases with microG
 #
 
-# Checking for installation environment
-if [ $BOOTMODE = true ]; then
-ROOT=$(find `magisk --path` -type d -name "mirror" | head -n 1)
-  ui_print "- Root path: $ROOT"
-else
-ROOT=""
-fi
-
-# Search APK location (FakeStore)
-  ui_print "- Search default APK location"
-  ui_print "  - Searching: FakeStore"
+# Search inbuilt APK location (FakeStore)
+sleep 1
 for DIR in "/system/priv-app/FakeStore" \
-           "/system/product/priv-app/FakeStore"; do
+"/system/product/priv-app/FakeStore"; do
 if [ -d "$DIR" ]; then
 FS="$DIR"
-  ui_print "    APK found in: $DIR"
 break
 fi
 done
 if [ -z "$FS" ]; then
-  ui_print "  Prebuilt FakeStore is not available"
-  ui_print "  This module is mainly for microG! Aborting! "
+sleep 1
+ ui_print "  Inbuilt FakeStore is not available"
+sleep 1
+ ui_print "  This module is mainly for microG! Aborting!"
 exit 1
 fi
 
 # Install APK as system apps
 APK=/system/priv-app
-  ui_print "- Installing APK files"
+sleep 1
+ ui_print "- Installing Play Store"
 mkdir -p $MODPATH$APK/Phonesky
 mv -f $MODPATH/Phonesky.apk $MODPATH$APK/Phonesky
-  ui_print "- Patching APK files"
-mkdir -p $MODPATH$APK/Phonesky
-mv -f $MODPATH/patches/* $MODPATH$APK/Phonesky
 
 # Configure core files
 PATCH1=/system/etc
 PATCH2=/system/framework
-PATCH3=/system/bin
-  ui_print "- Configuring core files"
+PATCH3=/system/product/microGSuiteOverlay
+sleep 1
+ ui_print "- Configuring core files"
 mkdir -p $MODPATH$PATCH1 $MODPATH$PATCH2 $MODPATH$PATCH3
 mv -f $MODPATH/etc/* $MODPATH$PATCH1
 mv -f $MODPATH/framework/* $MODPATH$PATCH2
-mv -f $MODPATH/npem $MODPATH$PATCH3
+mv -f $MODPATH/microGSuiteOverlay.apk $MODPATH$PATCH3
 
 # Clean up
+sleep 1
+ ui_print "- Cleaning up"
 rm -rf $MODPATH/*.apk
 rm -rf $MODPATH/etc
 rm -rf $MODPATH/framework
-rm -rf $MODPATH/npem
 rm -rf $MODPATH/patches
+rm -rf $MODPATH/Phonesky
+
+sleep 1

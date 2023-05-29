@@ -1,11 +1,11 @@
-#!/system/bin/sh
+#
+# Modified Play Store by the
+# open source loving GL-DP and all contributors;
+# Systemless installs modified Play Store to allow (in-)app-purchases with microG
+#
 
-# Wait for system boot-up
-while true; 
-do [ "$(getprop sys.boot_completed)" = "1" ] && 
-break; 
-sleep 5; 
-done;
-
-# Grant permissions
-npem;
+# Wait until boot completed
+while [ "$(getprop sys.boot_completed)" != "1" ]
+do
+sleep 5
+done
