@@ -7,7 +7,6 @@
 	    <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
         <permission name="android.permission.MANAGE_USB" />
     </privapp-permissions>
-    <!-- FakeStore: only use one permission (FAKE_PACKAGE_SIGNATURE) -->
     <privapp-permissions package="com.android.vending">
         <permission name="android.permission.ALLOCATE_AGGRESSIVE" />
         <permission name="android.permission.BACKUP" />

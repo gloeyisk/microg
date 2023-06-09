@@ -1,7 +1,9 @@
+#!/system/bin/sh
+
 #
 # Modified Play Store by the
-# open source loving GL-DP and all contributors;
-# Systemless installs modified Play Store to allow (in-)app-purchases with microG
+# open-source loving GL-DP and all contributors;
+# Systemless installs modified Play Store to allow/support In-App Purchases (IAPs) with microG
 #
 
 # Wait until boot completed
